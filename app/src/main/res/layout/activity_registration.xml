@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".RegistrationActivity">
+
+    <RelativeLayout
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/lottiefirst"
+        app:lottie_autoPlay="true"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:lottie_rawRes="@raw/registrationlottie"
+        />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@id/lottiefirst"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/text1"
+            android:layout_marginTop="20dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/ic_profile"
+            app:endIconMode="clear_text"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/firstInput"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            app:startIconDrawable="@drawable/ic_lock"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:id="@+id/Name"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:inputType="text"
+                android:id="@+id/secondInput"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            app:startIconDrawable="@drawable/ic_lock"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/Name"
+            android:id="@+id/textrepeat"
+            android:layout_width="250dp"
+            app:endIconMode="password_toggle"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:inputType="textPassword"
+                android:id="@+id/thirdInput"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/textrepeat"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/buttonforRegistration"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        android:background="@drawable/background_button"
+        android:backgroundTint="@color/blue_accent"
+        android:textColor="@color/white"
+        android:onClick="onClickRegisterButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textrepeat" />
+    </RelativeLayout>
+</RelativeLayout>
